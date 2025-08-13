@@ -61,6 +61,16 @@ python manage.py runserver
 ```
 Now open http://127.0.0.1:8000/ in your browser.
 
+## Screenshot of project
+<p align="center">
+  <img src="Screenshot of project/Home page.png" width="600" alt="folder structure">
+</p>
+<p align="center">
+  <img src="Screenshot of project/diabetes page.png" width="600" alt="folder structure">
+</p>
+
+## for all all screenshot checkout my screenshot folder...
+
 📊 Datasets
 The datasets used for model training are included in the dataset/ folder:
 
