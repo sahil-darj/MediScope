@@ -27,3 +27,48 @@ Users can input relevant health data, and the system provides predictions instan
 <p align="center">
   <img src="Screenshot of project/folder structure.png" width="600" alt="folder structure">
 </p>
+## ⚡ Installation & Setup
+
+### 1️⃣ Clone the repository
+```bash
+git clone https://github.com/yourusername/mediscope.git
+cd mediscope
+```
+
+2️⃣ Create & activate virtual environment
+```
+python -m venv venv
+# Windows
+venv\Scripts\activate
+# macOS/Linux
+source venv/bin/activate
+```
+
+3️⃣ Install dependencies
+```
+pip install -r requirements.txt
+```
+
+4️⃣ Apply migrations
+```
+python manage.py migrate
+```
+
+5️⃣ Run the development server
+```
+
+python manage.py runserver
+```
+Now open http://127.0.0.1:8000/ in your browser.
+
+📊 Datasets
+The datasets used for model training are included in the dataset/ folder:
+
+Diabetes Dataset → diabetes.csv
+
+Heart Disease Dataset → heart.csv
+
+Parkinson’s Dataset → parkinsons.csv
+
+👨‍💻 Author
+Sahil Darji
