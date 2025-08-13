@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MediScope</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body class="bg-gradient-to-br from-gray-50 to-blue-50 min-h-screen">
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md p-4 flex justify-between items-center">
+      <div class="flex items-center space-x-3">
+        <span class="text-xl font-bold text-blue-600">MediScope</span>
+      </div>
+      <ul class="flex space-x-6 items-center">
+        <li><a href="/" class="hover:text-blue-600 font-medium">Home</a></li>
+
+        <!-- Prediction Dropdown -->
+        <li class="relative group">
+          <span class="hover:text-blue-600 cursor-pointer font-medium"
+            >Predictions</span
+          >
+          <ul
+            class="absolute hidden group-hover:block bg-white shadow-lg rounded mt-2 w-48 z-10"
+          >
+            <li>
+              <a
+                href="/predict/diabetes/"
+                class="block px-4 py-2 hover:bg-blue-100"
+                >Diabetes</a
+              >
+            </li>
+            <li>
+              <a
+                href="/predict/heart/"
+                class="block px-4 py-2 hover:bg-blue-100"
+                >Heart Disease</a
+              >
+            </li>
+            <li>
+              <a
+                href="/predict/parkinsons/"
+                class="block px-4 py-2 hover:bg-blue-100"
+                >Parkinson's</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="/login/" class="hover:text-blue-600 font-medium">Login</a>
+        </li>
+        <li>
+          <a href="/signup/" class="hover:text-blue-600 font-medium">Signup</a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="text-center py-20 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <h1
+          class="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight"
+        >
+          Your Health,
+          <span
+            class="bg-gradient-to-r from-blue-600 to-red-600 bg-clip-text text-transparent"
+          >
+            Predicted
+          </span>
+        </h1>
+        <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
+          Advanced machine learning algorithms provide early insights into your
+          health risks, empowering you to take proactive steps toward better
+          wellness.
+        </p>
+        <div
+          class="flex flex-col sm:flex-row items-center justify-center gap-4"
+        >
+          <a
+            href="#predictions"
+            class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-all transform hover:scale-105 shadow-lg hover:shadow-xl"
+          >
+            Start Health Assessment
+          </a>
+          <a
+            href="#"
+            class="border border-gray-300 hover:border-gray-400 text-gray-700 px-8 py-4 rounded-xl font-semibold transition-all hover:bg-gray-50"
+          >
+            Learn More
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Prediction Cards Section -->
+    <section id="predictions" class="py-20 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-16">
+          <h2 class="text-4xl font-bold text-gray-900 mb-4">
+            Health Predictions
+          </h2>
+          <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+            Select a health assessment to get personalized risk predictions
+            based on your individual profile.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Diabetes -->
+          <a
+            href="/predict/diabetes/"
+            class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-3 hover:bg-blue-50 p-8"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6"
+            >
+              <span class="text-white text-2xl font-bold">D</span>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">
+              Diabetes Risk Assessment
+            </h3>
+            <p class="text-gray-600 mb-6">
+              Advanced ML algorithms analyze your health indicators to predict
+              diabetes risk with high accuracy.
+            </p>
+            <div
+              class="bg-blue-600 hover:bg-blue-700 text-white py-3 px-4 rounded-xl text-center font-semibold"
+            >
+              Start Assessment
+            </div>
+          </a>
+
+          <!-- Heart -->
+          <a
+            href="/predict/heart/"
+            class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-3 hover:bg-red-50 p-8"
+          >
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-xl flex items-center justify-center mb-6"
+            >
+              <span class="text-white text-2xl font-bold">H</span>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">
+              Heart Disease Prediction
+            </h3>
+            <p class="text-gray-600 mb-6">
+              Comprehensive cardiovascular risk evaluation using evidence-based
+              medical parameters.
+            </p>
+            <div
+              class="bg-red-600 hover:bg-red-700 text-white py-3 px-4 rounded-xl text-center font-semibold"
+            >
+              Start Assessment
+            </div>
+          </a>
+
+          <!-- Parkinson's Detection Card -->
+          <a
+            href="/predict/parkinsons/"
+            class="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-3 hover:bg-green-50 p-8"
+          >
+            <!-- Icon box with gradient green -->
+            <div
+              class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-xl flex items-center justify-center mb-6"
+            >
+              <span class="text-white text-2xl font-bold">P</span>
+            </div>
+
+            <!-- Title -->
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">
+              Parkinson's Detection
+            </h3>
+
+            <!-- Description -->
+            <p class="text-gray-600 mb-6">
+              Voice pattern analysis and motor function assessment for early
+              Parkinson's detection.
+            </p>
+
+            <!-- CTA Button -->
+            <div
+              class="bg-emerald-600 bg-green-700 text-white py-3 px-4 rounded-xl text-center font-semibold"
+            >
+              Start Assessment
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-7xl mx-auto text-center">
+        <div class="flex items-center justify-center space-x-3 mb-4">
+          <div
+            class="w-8 h-8 bg-gradient-to-br from-blue-600 to-blue-700 rounded-lg flex items-center justify-center"
+          >
+            <!-- Heart Icon -->
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="w-5 h-5 text-white"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4.318 6.318a4.5 4.5 0 016.364 0L12 7.636l1.318-1.318a4.5 4.5 0 116.364 6.364L12 20.364l-7.682-7.682a4.5 4.5 0 010-6.364z"
+              />
+            </svg>
+          </div>
+          <h3 class="text-2xl font-bold">MediScope</h3>
+        </div>
+        <p class="text-gray-400 mb-6">
+          Empowering individuals with AI-driven health insights for a better
+          tomorrow.
+        </p>
+        <div class="text-sm text-gray-500">
+          © 2025 MediScope. This tool is for informational purposes only and
+          should not replace professional medical advice.
+        </div>
+        <script>
+          window.watsonAssistantChatOptions = {
+            integrationID: "8b72f98c-7163-4224-90c3-b3873ec5f278", // The ID of this integration.
+            region: "us-south", // The region your integration is hosted in.
+            serviceInstanceID: "e024de5c-69d2-46fd-b542-4688ec7bad90", // The ID of your service instance.
+            onLoad: async (instance) => {
+              await instance.render();
+            },
+          };
+          setTimeout(function () {
+            const t = document.createElement("script");
+            t.src =
+              "https://web-chat.global.assistant.watson.appdomain.cloud/versions/" +
+              (window.watsonAssistantChatOptions.clientVersion || "latest") +
+              "/WatsonAssistantChatEntry.js";
+            document.head.appendChild(t);
+          });
+        </script>
+      </div>
+    </footer>
+  </body>
+</html>

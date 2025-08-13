@@ -1,0 +1,88 @@
+{% extends 'predictor/base.html' %} {% block content %}
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+/>
+<h2 class="text-center mb-4 fw-bold text-primary">
+  Predict Diabetes Risk with AI Precision
+</h2>
+<p class="text-center text-muted mb-5">
+  Enter your health metrics to get an instant prediction powered by Machine
+  Learning.
+</p>
+
+<form method="post" class="card p-4 shadow-sm bg-white">
+  {% csrf_token %}
+  <div class="row mb-3">
+    <div class="col-md-4">
+      <input
+        type="text"
+        name="Pregnancies"
+        class="form-control"
+        placeholder="Pregnancies"
+      />
+    </div>
+    <div class="col-md-4">
+      <input
+        type="text"
+        name="Glucose"
+        class="form-control"
+        placeholder="Glucose"
+      />
+    </div>
+    <div class="col-md-4">
+      <input
+        type="text"
+        name="BloodPressure"
+        class="form-control"
+        placeholder="Blood Pressure"
+      />
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-md-4">
+      <input
+        type="text"
+        name="SkinThickness"
+        class="form-control"
+        placeholder="Skin Thickness"
+      />
+    </div>
+    <div class="col-md-4">
+      <input
+        type="text"
+        name="Insulin"
+        class="form-control"
+        placeholder="Insulin"
+      />
+    </div>
+    <div class="col-md-4">
+      <input type="text" name="BMI" class="form-control" placeholder="BMI" />
+    </div>
+  </div>
+
+  <div class="row mb-3">
+    <div class="col-md-6">
+      <input
+        type="text"
+        name="DiabetesPedigreeFunction"
+        class="form-control"
+        placeholder="Diabetes Pedigree Function"
+      />
+    </div>
+    <div class="col-md-6">
+      <input type="text" name="Age" class="form-control" placeholder="Age" />
+    </div>
+  </div>
+
+  <div class="text-center">
+    <button type="submit" class="btn btn-primary btn-lg">Predict</button>
+  </div>
+</form>
+
+{% if result %}
+<div class="alert alert-info text-center mt-4">
+  <h4>Prediction Result: <strong>{{ result }}</strong></h4>
+</div>
+{% endif %} {% endblock %}
